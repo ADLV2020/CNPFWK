@@ -1,0 +1,342 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 17 10:25:16 ART 2020</td>
+</tr>
+<tr><td>Total time:</td><td>688 seconds (688296 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionColectivaLCT()'><b>crearCotizacionColectivaLCT</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 34480700, BUENOS AIRES, Panglione, Pehuen, mail@mail.com, M, 1</td>
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: 3
+	at pruebas.PortalProductoresTest.crearCotizacionColectivaLCT(PortalProductoresTest.java:279)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1602016526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1602016526'><pre>java.lang.ArrayIndexOutOfBoundsException: 3
+	at pruebas.PortalProductoresTest.crearCotizacionColectivaLCT(PortalProductoresTest.java:279)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionColectivaLCT()'><b>crearCotizacionColectivaLCT</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 33445667, BUENOS AIRES, Gonzalez, Gonzalo, correo@mail.com, M, 2</td>
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: 3
+	at pruebas.PortalProductoresTest.crearCotizacionColectivaLCT(PortalProductoresTest.java:279)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace688662124", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688662124'><pre>java.lang.ArrayIndexOutOfBoundsException: 3
+	at pruebas.PortalProductoresTest.crearCotizacionColectivaLCT(PortalProductoresTest.java:279)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.detallesPolizaVigente()'><b>detallesPolizaVigente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 2000253, , , , , , , , </td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (262, 122). Other element would receive the click: &lt;div class=&quot;modal fade in&quot; id=&quot;loading&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; style=&quot;z-index: 99999 !important; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-VNQ4076&apos;, ip: &apos;192.168.56.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8671b94bff0632399a7bebb1885e862a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at PortalProductores.Menu.clicOnPolizas(Menu.java:38)
+	at pruebas.PortalProductoresTest.realizaBusqueda(PortalProductoresTest.java:101)
+	at pruebas.PortalProductoresTest.detallesPolizaVigente(PortalProductoresTest.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1135131957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1135131957'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (262, 122). Other element would receive the click: &lt;div class=&quot;modal fade in&quot; id=&quot;loading&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; style=&quot;z-index: 99999 !important; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-VNQ4076&apos;, ip: &apos;192.168.56.82&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8671b94bff0632399a7bebb1885e862a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at PortalProductores.Menu.clicOnPolizas(Menu.java:38)
+	at pruebas.PortalProductoresTest.realizaBusqueda(PortalProductoresTest.java:101)
+	at pruebas.PortalProductoresTest.detallesPolizaVigente(PortalProductoresTest.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.buscarPoliza()'><b>buscarPoliza</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 2000253, , , , , , , , </td>
+<td></td>
+<td>20</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.buscarPoliza()'><b>buscarPoliza</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 16001042, , , , , , 09/09/2011, , </td>
+<td></td>
+<td>20</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.buscarPoliza()'><b>buscarPoliza</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: , ABAN ALICIA MERCEDES, , , , , , , </td>
+<td></td>
+<td>20</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.buscarPoliza()'><b>buscarPoliza</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 343434, , , , , , , , </td>
+<td></td>
+<td>20</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.consultarCotizaciones()'><b>consultarCotizaciones</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 25/11/2020, 30/11/2020, ACCIDENTES PERSONALES COLECTIVO, GUADALUPE, BASSO, BAYER MARTA INES, 222</td>
+<td></td>
+<td>25</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionAccidente()'><b>crearCotizacionAccidente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 10933835, 10/10/1980, Ñorniñeñko, Ñarya, F, 100000, 11/11/2019, BUENOS AIRES, 2 MESES, ABOGADO, email@gmail.com, 2000000, 100000, 50000, Física, , Individual, Período Corto, Sí, Jornada Laboral e In Itinere </td>
+<td></td>
+<td>46</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionAccidente()'><b>crearCotizacionAccidente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 22999888, 11/11/1980, Fernandez, Fernando, M, 80000, 9/7/2020, SALTA, 3 MESES, ABOGADO, email@outlook.com, 2000000, 400000, 20000, Física, , Individual, Período Corto, No, 24 horas</td>
+<td></td>
+<td>46</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionAccidente()'><b>crearCotizacionAccidente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 30999888, 09/09/1999, Rodriguez, Rodrigo, M, 90000, 12/12/2019, CHACO, 4 MESES, ABOGADO, mail@gmail.com, 2000000, 200000, 60000, Física, , Individual, Período Corto, Sí, 24 horas</td>
+<td></td>
+<td>46</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionAccidente()'><b>crearCotizacionAccidente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 34480701, 01/02/1994, , , M, 90000, 12/12/2019, CHACO, 4 MESES, ABOGADO, mail@gmail.com, 2000000, 200000, 60000, Jurídica, Ecosistemas, Individual, Período Corto, No, 24 horas</td>
+<td></td>
+<td>45</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionCNPVie()'><b>crearCotizacionCNPVie</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 10933835, 10/10/1980, Ñorniñeñko, Ñarya, F, 11/11/2019, BUENOS AIRES, CASADO, 01144559966, ABOGADO, email@gmail.com, 80, 165, NORMAL, 20000, 10, MENSUAL, A, 20, 80, 23000, PESOS</td>
+<td></td>
+<td>39</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionColectivaCM()'><b>crearCotizacionColectivaCM</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 34480700, BUENOS AIRES, Panglione, Pehuen, mail@mail.com, M, 1</td>
+<td></td>
+<td>29</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionColectivaCM()'><b>crearCotizacionColectivaCM</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 33445667, BUENOS AIRES, Gonzalez, Gonzalo, correo@mail.com, M, 2</td>
+<td></td>
+<td>32</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionConfiance()'><b>crearCotizacionConfiance</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 10933835, 10/10/1980, Ñorniñeñko, Ñarya, F, 11/11/2019, BUENOS AIRES, CASADO, 01144559966, ABOGADO, email@gmail.com, 80, 165, NORMAL, 20000, 10, MENSUAL, A, 20, 80, 23000</td>
+<td></td>
+<td>39</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.crearCotizacionTresor()'><b>crearCotizacionTresor</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: DNI, 10933835, 10/10/1980, Ñorniñeñko, Ñarya, F, 11/11/2019, BUENOS AIRES, CASADO, 01144559966, ABOGADO, email@gmail.com, 80, 165, NORMAL, 20000, 10, MENSUAL, A, 20, 80, 23000, PESOS</td>
+<td></td>
+<td>38</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.descargarCotizaciones()'><b>descargarCotizaciones</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 25/11/2020, 30/11/2020, ACCIDENTES PERSONALES COLECTIVO, GUADALUPE, BASSO, BAYER MARTA INES, 222</td>
+<td></td>
+<td>26</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.detallesPolizaVigente()'><b>detallesPolizaVigente</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 23120, , , , , , , , </td>
+<td></td>
+<td>25</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.excluirCotizacion()'><b>excluirCotizacion</b><br>Test class: pruebas.PortalProductoresTest</td>
+<td></td>
+<td>19</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.modificarConductoPagoTomador()'><b>modificarConductoPagoTomador</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 23120, , , , , , , , , VISA, 4029181051216115, Observaciones</td>
+<td></td>
+<td>46</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+<tr>
+<td title='pruebas.PortalProductoresTest.modificarDomicilioTomador()'><b>modificarDomicilioTomador</b><br>Test class: pruebas.PortalProductoresTest<br>Parameters: 23120, , , , , , , , , Calle, 1234, 1, A, Belgrano, BUENOS AIRES, 1428, 01144667795, mail@correo.com, Observaciones</td>
+<td></td>
+<td>68</td>
+<td>pruebas.PortalProductoresTest@3e57cd70</td></tr>
+</table><p>
+</body>
+</html>

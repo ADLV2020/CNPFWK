@@ -1,0 +1,8 @@
+titulo,nroSiniestro,nroPoliza,nroDNI,fechaDesde,fechaHasta,ramo
+Caso 10 - Búsqueda - Por todos los campos,115,61000011,,29/10/2019,30/10/2019,SEPELIO COLECTIVO
+Caso 38 - Búsqueda - Por nro de Siniestro,115,,,,,
+Caso 39 - Búsqueda - Por nro de documento,,,14118858,,,
+Caso 40 - Búsqueda - Por nro de Póliza,,61000011,,,,
+Caso 41 - Búsqueda - Por Periodo,,,,29/10/2019,30/10/2019,
+Caso 42 - Búsqueda - Por Nro de Siniestro y Ramo,115,,,,,SEPELIO COLECTIVO
+Caso 43 - Búsqueda - Por Ramo y Periodo,,,,29/10/2019,30/10/2019,SEPELIO COLECTIVO

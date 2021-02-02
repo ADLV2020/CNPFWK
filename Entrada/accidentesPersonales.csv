@@ -1,0 +1,5 @@
+tipodni,dni,fechanacimiento,apellido,nombre,genero,sueldo,fechaContrato,provincia,vigencia,actividad,mail,muerte,ityp,gastosMedicos,tipoPersona,razonSocial,tipoCotizacion,vigenciaCobertura,moto,ambito
+DNI,10933835,10/10/1980,Ñorniñeñko,Ñarya,F,100000,11/11/2019,BUENOS AIRES,2 MESES,ABOGADO,email@gmail.com,2000000,100000,50000,Física,,Individual,Período Corto,Sí,Jornada Laboral e In Itinere 
+DNI,22999888,11/11/1980,Fernandez,Fernando,M,80000,9/7/2020,SALTA,3 MESES,ABOGADO,email@outlook.com,2000000,400000,20000,Física,,Individual,Período Corto,No,24 horas
+DNI,30999888,09/09/1999,Rodriguez,Rodrigo,M,90000,12/12/2019,CHACO,4 MESES,ABOGADO,mail@gmail.com,2000000,200000,60000,Física,,Individual,Período Corto,Sí,24 horas
+DNI,34480701,01/02/1994,,,M,90000,12/12/2019,CHACO,4 MESES,ABOGADO,mail@gmail.com,2000000,200000,60000,Jurídica,Ecosistemas,Individual,Período Corto,No,24 horas

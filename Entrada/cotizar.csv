@@ -1,0 +1,3 @@
+﻿codigoProductor,fechaNacimiento,cantidadModulos,expectedResult,testDescription
+122345,"1970-03-20",10,200,1-Exitoso
+122345,"9999-03-20",10,400,2-Validacion fechaNacimiento año invalido

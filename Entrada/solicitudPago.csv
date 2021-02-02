@@ -1,0 +1,2 @@
+pagarA,sucursal,fechaRegistro,fechaContable,fechaEstimPago,ramo,nombreAsegurado,tipoDocumento,nroDocumento,moneda,nombreCobrador,impCambio,impTotalPagar,desc,cbu,nroSiniestroBuscar,tipoPago,clasePago,conceptoPago,impAPagar
+OTRO,CASA CENTRAL,16/11/2020,16/11/2020,16/11/2020,ASSURMAX,LEZCANO GRACIELA ELENA,DNI,14118858,Pesos,LEZCANO CARLA,1,30000,Description here,1234567890123456789012,125,TOTAL,INDEMNIZACIONES,11 - INDEMNIZACION - STROS POR MUERTE VI ,30000
