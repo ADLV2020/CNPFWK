@@ -43,10 +43,10 @@ public class Solicitudes {
 	@FindBy(xpath="//select[@id='Ramo']")
 	private WebElement selRamo;
 	
-	@FindBy(xpath="//tbody/tr[1]/td[7]/a[2]/i[1]")
+	@FindBy(xpath="//tbody/tr[1]/td[8]/a[2]/i[1]")
 	private WebElement solicitud;
 	
-	@FindBy(xpath="//tbody/tr[1]/td[7]/a[1]/i[1]")
+	@FindBy(xpath="//tbody/tr[1]/td[8]/a[1]/i[1]")
 	private WebElement btnDescargar;
 	
 	@FindBy(xpath="//a[contains(text(), 'Buscar')]")

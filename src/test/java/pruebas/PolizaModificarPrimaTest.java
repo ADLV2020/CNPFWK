@@ -44,15 +44,15 @@ public class PolizaModificarPrimaTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(15);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
-		Utilities.waiter(2);
+		Utilities.waiter(5);
 		modificacionpolizas.clicOnModificar();
-		Utilities.waiter(2);
+		Utilities.waiter(5);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
-		Utilities.waiter(3);
+		Utilities.waiter(7);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Sección a modificar");
 		
 		
@@ -61,14 +61,14 @@ public class PolizaModificarPrimaTest {
 		PolizasModificacionPrima modificaPrima = new PolizasModificacionPrima(driver);
 
 		modificaPrima.cargaDatosPrima(nuevaPrima, observaciones, prioridad);
-		Utilities.waiter(3);
+		Utilities.waiter(8);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Cambios realizados");
 		
-		
+		Utilities.waiter(10);
 		modificaPrima.clicOnGuardarCambios();
-		Utilities.waiter(2);
+		Utilities.waiter(10);
 		modificaPrima.clicOnConfirmar();
-		Utilities.waiter(3);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Confirmación");
 
 		modificaPrima.clicOnCerrar();

@@ -47,8 +47,10 @@ public class polizaDescargaEndosoTest {
 		buscar.realizaBusqueda(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta, ramo, driver);
 		
 		policy.clicOnVerPerfil();
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Perfil");
 
+		Utilities.waiter(4);
 		policy.clicOnVerEndoso();
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Endoso");
 

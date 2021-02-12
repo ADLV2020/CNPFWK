@@ -33,6 +33,7 @@ public class VerHistorialRegistrosPolizaColectivaTest {
 	
 	@Test(dataProvider = "Historial Registros Poliza Colectiva")
 	public void verHistorialRegistrosPolizaColectiva(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo) throws InvalidFormatException, IOException, InterruptedException {
+		nombreArchivoEvidencias = "PortalProductores - Testing - Evidencias - Ver Historial de Registros - " + Utilities.obtenerFechaActual() + ".docx";
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Poliza colectiva - Ver Historial de Registros", 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador  + ", nombre asegurado: " + nombreasegurado + ", dni asegurado: " + dniasegurado + ", fecha emisión: " + fechaemision + ", fecha hasta: " + fechahasta + ", ramo: " + ramo, 10);
@@ -45,13 +46,14 @@ public class VerHistorialRegistrosPolizaColectivaTest {
 		buscar.realizaBusqueda(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta, ramo, driver);
 
 		policy.clicOnVerPerfil();
-		Utilities.waiter(3);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Perfil");
 
 		ModificacionPolizas modificacionpoliza = new ModificacionPolizas(driver);
 
 		modificacionpoliza.clicOnHistorialRegistros();
 		Utilities.realizarScrollDown(driver);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Endosos disponibles para descarga");
 
 	}

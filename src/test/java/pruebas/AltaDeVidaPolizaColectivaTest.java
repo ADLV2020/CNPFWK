@@ -61,15 +61,15 @@ public class AltaDeVidaPolizaColectivaTest {
 		
 		altaVida.cargarAltaVida(tipoDNIAlta, dniAlta, nombre, apellido, sexo, fechaNacimiento, categoria, salarioBruto, fechaIngreso);
 		Utilities.waiter(5);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Asegurado");
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Carga de Alta de Vida");
 
 		altaVida.clicOnAgregar();
 		Utilities.waiter(3);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Asegurado");
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Agregar");
 
 		altaVida.clicOnProcesar();
 		Utilities.waiter(3);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Asegurado");
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Finalización");
 
 		altaVida.clicOnCerrar();
 	}
