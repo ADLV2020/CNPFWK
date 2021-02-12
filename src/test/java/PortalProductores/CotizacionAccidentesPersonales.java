@@ -66,7 +66,7 @@ public class CotizacionAccidentesPersonales {
 	@FindBy(xpath="//input[@id='DT_Inicio_Vigencia']")
 	private WebElement txtVigenciaDesde;
 	
-	@FindBy(xpath="//td[contains(text(),'31')]")
+	@FindBy(xpath="//td[contains(text(),'28')]")
 	private WebElement fechaProv;
 	
 	@FindBy(xpath="//select[@id='Atividade']")

@@ -44,13 +44,13 @@ public class PolizasModificarNombreAseguradoTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
-		Utilities.waiter(2);
+		Utilities.waiter(5);
 		modificacionpolizas.clicOnModificar();
-		Utilities.waiter(2);
+		Utilities.waiter(5);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
 		Utilities.waiter(5);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Endosos disponibles");
@@ -60,13 +60,13 @@ public class PolizasModificarNombreAseguradoTest {
 		PolizasModificacionNombreAsegurado modificaNombreAsegurado = new PolizasModificacionNombreAsegurado(driver);
 		
 		modificaNombreAsegurado.cargaDatosNombreAsegurado(apellidoAsegurado, nombreAsegurado, tipoDNI, dni, observacion, prioridad);
-		Utilities.waiter(3);
+		Utilities.waiter(12);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Nuevos datos cargados");
 
 		modificaNombreAsegurado.clicOnGuardarAsegurado();
-		Utilities.waiter(2);
+		Utilities.waiter(8);
 		modificaNombreAsegurado.clicOnConfirmarAsegurado();
-		Utilities.waiter(3);
+		Utilities.waiter(8);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Confirmación");
 
 		modificaNombreAsegurado.clicOnCerrarAsegurado();

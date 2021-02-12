@@ -31,9 +31,9 @@ public class modificarNombreDNITomadorPoliza {
 	}
 	
 	@Test(dataProvider = "Modifica Nombre y Documento Tomador")
-	public void modificarPNombreDocumentoTomadorPoliza(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String apellidoAsegurado, String nombreAsegurado, String tipoDNI, String dni, String observacion, String prioridad) throws InvalidFormatException, IOException, InterruptedException {
+	public void modificarPNombreDocumentoTomadorPoliza(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String apellidoAsegurado, String nombreAsegurado, String tipoDNI, String dni, String observacion, String prioridad, String tipopoliza) throws InvalidFormatException, IOException, InterruptedException {
 		nombreArchivoEvidencias = "PortalProductores - Testing - Evidencias - Modificación de nombre y documento del tomador - " + Utilities.obtenerFechaActual() + ".docx";
-		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de nombre y documento del tomador", 20);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de nombre y documento del tomador - tipo " + tipopoliza, 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador, 10);
 		

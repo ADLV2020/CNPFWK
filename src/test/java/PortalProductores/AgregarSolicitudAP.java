@@ -12,10 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AgregarSolicitudAP {
 	
-	@FindBy(xpath="//input[@name='TomadorSexo' and @value='M']")
+	@FindBy(xpath="//input[@name='TomadorSexo' and @value='F']")
 	private WebElement radFemenino;
 	
-	@FindBy(xpath="//input[@name='TomadorSexo' and @value='F']")
+	@FindBy(xpath="//input[@name='TomadorSexo' and @value='M']")
 	private WebElement radMasculino;
 	
 	@FindBy(xpath="//select[@name='TomadorTipoDocumento']")

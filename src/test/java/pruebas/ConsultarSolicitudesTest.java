@@ -49,8 +49,10 @@ public class ConsultarSolicitudesTest {
 
 		solicitudes.clicOnBuscar();
 		solicitudes.clicOnSolicitud();
+		Utilities.waiter(3);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de la solicitud");
 		Utilities.realizarScrollDown(driver);
+		Utilities.waiter(3);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de la solicitud");
 	}
 	

@@ -55,7 +55,7 @@ public class DescargarCertificadoSolicitudesTest {
 		solicitudes.impresionCertificado(razonSocial, cuil);
 		solicitudes.clicOnIncluir();
 		Utilities.waiter(5);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de la solicitud");
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Descarga");
 		solicitudes.clicOnDescargar();
 	}
 	

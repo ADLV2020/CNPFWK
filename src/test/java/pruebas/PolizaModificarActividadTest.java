@@ -45,35 +45,35 @@ public class PolizaModificarActividadTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(7);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
-		Utilities.waiter(2);
+		Utilities.waiter(4);
 		modificacionpolizas.clicOnModificar();
-		Utilities.waiter(2);
+		Utilities.waiter(4);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
-		Utilities.waiter(3);
+		Utilities.waiter(5);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Sección a modificar");
 		
 		modificacionpolizas.clicOnModificarActividadLaboral();
 		
 		PolizasModificacionActividadLaboral modificaActividad = new PolizasModificacionActividadLaboral(driver);
-		Utilities.waiter(5);
+		Utilities.waiter(6);
 		modificaActividad.cargaDatosActividadLaboral(actividad, observaciones, prioridad);
 		
-		Utilities.waiter(3);
+		Utilities.waiter(5);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Cambios realizados");
 		
 		
 		modificaActividad.clicOnGuardarActividad();
-		Utilities.waiter(2);
+		Utilities.waiter(4);
 		modificaActividad.clicOnConfirmarActividad();
-		Utilities.waiter(3);
+		Utilities.waiter(53);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Confirmación");
 
 		modificaActividad.clicOnCerrarActividad();
-		Utilities.waiter(3);
+		Utilities.waiter(5);
 	}
 	
 	@DataProvider(name= "Modificar Actividad Laboral")

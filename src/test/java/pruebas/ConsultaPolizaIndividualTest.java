@@ -47,6 +47,7 @@ public class ConsultaPolizaIndividualTest {
 		buscar.realizaBusqueda(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta, ramo, driver);
 		
 		policy.clicOnVerPerfil();
+		Utilities.waiter(5);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Perfil");
 
 		policy.clicOnVer(ver);

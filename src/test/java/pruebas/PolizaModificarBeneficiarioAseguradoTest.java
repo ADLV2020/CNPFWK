@@ -44,7 +44,7 @@ public class PolizaModificarBeneficiarioAseguradoTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(12);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
@@ -70,7 +70,7 @@ public class PolizaModificarBeneficiarioAseguradoTest {
 		modificaAsegurado.clicOnGuardarAsegurado();
 		Utilities.waiter(2);
 		modificaAsegurado.clicOnConfirmarAsegurado();
-		Utilities.waiter(3);
+		Utilities.waiter(9);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Confirmación");
 
 		modificaAsegurado.clicOnCerrarAsegurado();

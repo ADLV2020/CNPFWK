@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pruebas.AltaDeVidaPolizaColectivaTest">
+      <class name="pruebas.ModificarSolicitudVCTest">
         <methods>
-          <include name="altaDeVidaPolizaColectiva" invocation-numbers="0"/>
+          <include name="modificarVC" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- pruebas.AltaDeVidaPolizaColectivaTest -->
+      </class> <!-- pruebas.ModificarSolicitudVCTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -53,16 +53,17 @@ public class verPolizaIndividualTest {
 		Utilities.waiter(2);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
 		Utilities.waiter(5);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Impresiones disponibles");
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Disponibles");
 		
 		modificacionpolizas.clicOnVer();
-		Utilities.waiter(3);
-		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Impresión realizada");
+		Utilities.waiter(6);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Visualización");
 		Utilities.realizarScrollDown(driver);
 		modificacionpolizas.clicOnGuardarSalir();
 		modificacionpolizas.clicOnConfirmar();
 		Utilities.waiter(5);
 		modificacionpolizas.clicOnCerrarVerPoliza();
+		
 	}
 	
 	@DataProvider(name= "Ver Poliza")
