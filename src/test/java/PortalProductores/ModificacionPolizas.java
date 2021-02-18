@@ -174,7 +174,7 @@ public class ModificacionPolizas {
 	private WebElement btnImprimirConstancia;
 	
 	//ver una mejor forma de localizar el botón de agregar un asegurado
-	@FindBy(xpath="//body/div[2]/div[1]/section[2]/div[1]/div[6]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/a[1]/i[1]")
+	@FindBy(xpath="//body/div[2]/div[1]/section[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/div[1]/a[1]/i[1]")
 	private WebElement btnAgregarAsegurado;
 	
 	@FindBy(xpath="//input[@id='CUIT']")
@@ -236,7 +236,7 @@ public class ModificacionPolizas {
 	}
 	
 	public void clicOnModificar() {
-		Utilities.waiter(3);
+		Utilities.waiter(5);
 		wait.until(ExpectedConditions.elementToBeClickable(btnModificar)).click();
 	}
 	
@@ -352,6 +352,7 @@ public class ModificacionPolizas {
 		selectMedioDePago.click();
 		selectMedioDePago.sendKeys(metodoPago);
 		txtNroTarjeta.sendKeys(nroTarjeta);
+		Utilities.waiter(3);
 		radTitular.click();
 		txtObservaciones.sendKeys(observaciones);
 		//radPrioridadNormal.click();

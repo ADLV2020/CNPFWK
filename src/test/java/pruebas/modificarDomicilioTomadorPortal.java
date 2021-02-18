@@ -29,9 +29,9 @@ public class modificarDomicilioTomadorPortal {
 	}
 
 	@Test(dataProvider = "Modificar Domicilio")
-	public void modificarDomicilioTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String calle, String altura, String piso, String dto, String localidad, String provincia, String codpostal, String telefono, String mail, String observaciones) throws InvalidFormatException, IOException, InterruptedException {
+	public void modificarDomicilioTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String calle, String altura, String piso, String dto, String localidad, String provincia, String codpostal, String telefono, String mail, String observaciones, String tipopoliza) throws InvalidFormatException, IOException, InterruptedException {
 		nombreArchivoEvidencias = "PortalProductores - Testing - Evidencias - Modificación de domicilio del tomador - " + Utilities.obtenerFechaActual() + ".docx";
-		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de domicilio del tomador", 20);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de domicilio del tomador - poliza " + tipopoliza, 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador  + ", nombre asegurado: " + nombreasegurado + ", dni asegurado: " + dniasegurado + ", fecha emisión: " + fechaemision + ", fecha hasta: " + fechahasta + ", ramo: " + ramo, 10);
 		

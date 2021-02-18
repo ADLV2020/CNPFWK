@@ -35,6 +35,7 @@ public class buscarPolizaPortal {
 	public void buscarPoliza(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo) throws InvalidFormatException, IOException, InterruptedException {
 		menu = new Menu(driver);
 		buscarPolizaEvidencia(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta,  ramo);
+		Utilities.waiter(5);
 		realizaBusqueda(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta, ramo, driver);
 
 	}

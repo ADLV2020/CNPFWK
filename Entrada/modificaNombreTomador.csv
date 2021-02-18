@@ -1,2 +1,3 @@
-poliza,nombretomador,solicitud,dnitomador,nombreasegurado,dniasegurado,fechaemision,fechahasta,ramo,apellido,nombre,tipoDNI,dni,observacion,prioridad
-19169,,,,,,,,,Gonzalez,Gonzalo,DNI,23455099,Observación,Alta
+poliza,nombretomador,solicitud,dnitomador,nombreasegurado,dniasegurado,fechaemision,fechahasta,ramo,apellido,nombre,tipoDNI,dni,observacion,prioridad,tipopoliza
+19169,,,,,,,,,Gonzalez,Gonzalo,DNI,23455099,Observación,Alta,Individual
+11745812,,,,,,,,,Perez,Perencio,DNI,23455055,Observación,Alta,Colectiva

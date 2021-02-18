@@ -43,19 +43,19 @@ public class VerHistorialEndosoPolizaTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(15);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
-		Utilities.waiter(2);
+		Utilities.waiter(10);
 		modificacionpolizas.clicOnModificar();
-		Utilities.waiter(2);
+		Utilities.waiter(10);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Endosos disponibles");
 		
 		modificacionpolizas.clicOnDescargarHistorial();
-		Utilities.waiter(3);
+		Utilities.waiter(10);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Hisotiral de Endoso");
 		modificacionpolizas.clicnOnSalirHistorial();
 	}

@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import PortalProductores.AgregarSolicitudAP;
 import PortalProductores.AgregarSolicitudVC;
 import PortalProductores.AltaVidasPolizaColectiva;
+import PortalProductores.CierreComisiones;
 import PortalProductores.CotizacionAccidentesPersonales;
 import PortalProductores.CotizacionCNPVie;
 import PortalProductores.CotizacionConfiance;
@@ -79,6 +80,7 @@ public class PortalProductoresTest {
 	private String archivoDataDescargarEndososPoliza = "..\\Ecosistemas-CNP\\Entrada\\descargarEndososPolizaColectiva.csv";
 	private String archivoDataHistorialRegistrosPoliza = "..\\Ecosistemas-CNP\\Entrada\\historialRegistrosPolizaColectiva.csv";
 	private String nombreArchivoEvidencias;
+	private String archivoDataComisiones = "..\\Ecosistemas-CNP\\Entrada\\comisiones.csv";
 	private Menu menu;
 	private int indiceAsegurados=0;
 	
@@ -170,8 +172,8 @@ public class PortalProductoresTest {
 	}
 	
 	@Test(dataProvider = "Modificar Conducto Pago")
-	public void modificarConductoPagoTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String medioPago, String nroTarjeta, String observaciones) throws InvalidFormatException, IOException, InterruptedException {
-		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de conducto pago", 20);
+	public void modificarConductoPagoTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String medioPago, String nroTarjeta, String observaciones, String tipopoliza) throws InvalidFormatException, IOException, InterruptedException {
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de conducto pago - póliza " + tipopoliza, 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador  + ", nombre asegurado: " + nombreasegurado + ", dni asegurado: " + dniasegurado + ", fecha emisión: " + fechaemision + ", fecha hasta: " + fechahasta + ", ramo: " + ramo + ", medioPago: " + medioPago + ", nroTarjeta: " + nroTarjeta + ", observaciones: " + observaciones, 10);
 		
@@ -208,8 +210,8 @@ public class PortalProductoresTest {
 	}
 	
 	@Test(dataProvider = "Modificar Domicilio")
-	public void modificarDomicilioTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String calle, String altura, String piso, String dto, String localidad, String provincia, String codpostal, String telefono, String mail, String observaciones) throws InvalidFormatException, IOException, InterruptedException {
-		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de domicilio del tomador", 20);
+	public void modificarDomicilioTomador(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String calle, String altura, String piso, String dto, String localidad, String provincia, String codpostal, String telefono, String mail, String observaciones, String tipopoliza) throws InvalidFormatException, IOException, InterruptedException {
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de domicilio del tomador - poliza " + tipopoliza, 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador  + ", nombre asegurado: " + nombreasegurado + ", dni asegurado: " + dniasegurado + ", fecha emisión: " + fechaemision + ", fecha hasta: " + fechahasta + ", ramo: " + ramo, 10);
 		
@@ -1035,8 +1037,8 @@ public class PortalProductoresTest {
 	}
 	
 	@Test(dataProvider = "Modifica Nombre y Documento Tomador")
-	public void modificarPNombreDocumentoTomadorPoliza(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String apellidoAsegurado, String nombreAsegurado, String tipoDNI, String dni, String observacion, String prioridad) throws InvalidFormatException, IOException, InterruptedException {
-		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de nombre y documento del tomador", 20);
+	public void modificarPNombreDocumentoTomadorPoliza(String poliza, String nombretomador, String solicitud, String dnitomador, String nombreasegurado, String dniasegurado, String fechaemision, String fechahasta, String ramo, String apellidoAsegurado, String nombreAsegurado, String tipoDNI, String dni, String observacion, String prioridad, String tipopoliza) throws InvalidFormatException, IOException, InterruptedException {
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Modificación de nombre y documento del tomador - tipo " + tipopoliza, 20);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
 		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "póliza: " + poliza + ", nombre tomador: " + nombretomador + ", solicitud: " + solicitud  + ", dni tomador: " + dnitomador, 10);
 		
@@ -1398,6 +1400,68 @@ public class PortalProductoresTest {
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Endosos disponibles para descarga");
 
 	}
+	
+	@Test(dataProvider = "Consulta Cierres Comisiones")
+	public void consultaCierresComisiones(String fechaInicio, String fechaFin, String nombreProductor, String codigoProductor) throws InvalidFormatException, IOException, InterruptedException {
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Consulta de Cierres de comisiones", 20);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "fechaInicio: " + fechaInicio + ", fechaFin: " + fechaFin + ", nombreProductor: " + nombreProductor  + ", codigoProductor: " + codigoProductor, 10);
+
+		menu.clicOnCierres();
+		
+		CierreComisiones comisiones = new CierreComisiones(driver);
+		
+		comisiones.cargarDatosBusqueda(fechaInicio, fechaFin);
+		comisiones.clicOnLupaProductor();
+		comisiones.cargaDatosProductor(nombreProductor, codigoProductor);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Búsqueda de productor");
+		comisiones.clicOnSumarProductor();
+		Utilities.waiter(2);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de búsqueda");
+
+		comisiones.clicOnBuscar();
+		Utilities.waiter(2);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Búsqueda de comisiones");
+		
+		comisiones.clicOnConsultar();
+		Utilities.waiter(5);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Cierres de comisiones");
+
+	}
+	
+	@Test(dataProvider = "Consulta Cierres Comisiones")
+	public void descargaCierresComisiones(String fechaInicio, String fechaFin, String nombreProductor, String codigoProductor) throws InvalidFormatException, IOException, InterruptedException {
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Descarga de comisiones", 20);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de entrada", 12);
+		CapturaEvidencia.escribirTituloEnDocumento(rutaEvidencias + "\\" + nombreArchivoEvidencias, "fechaInicio: " + fechaInicio + ", fechaFin: " + fechaFin + ", nombreProductor: " + nombreProductor  + ", codigoProductor: " + codigoProductor, 10);
+
+		menu.clicOnCierres();
+		
+		CierreComisiones comisiones = new CierreComisiones(driver);
+		
+		comisiones.cargarDatosBusqueda(fechaInicio, fechaFin);
+		comisiones.clicOnLupaProductor();
+		comisiones.cargaDatosProductor(nombreProductor, codigoProductor);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Búsqueda de productor");
+		comisiones.clicOnSumarProductor();
+		Utilities.waiter(2);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Datos de búsqueda");
+
+		comisiones.clicOnBuscar();
+		Utilities.waiter(2);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Búsqueda de comisiones");
+		
+		comisiones.clicOnDescargarComisiones();
+		Utilities.waiter(5);
+		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Comisiones descargadas");
+
+	}
+	
+	@DataProvider(name= "Consulta Cierres Comisiones")
+	public Object[][] obtenerDatosCierresComisiones() throws Exception {
+		return DatosExternos.leerCSV(archivoDataComisiones, ',', false);
+	}
+	
 	
 	@DataProvider(name= "Historial Registros Poliza Colectiva")
 	public Object[][] obtenerDatosHistorialRegistrosPoliza() throws Exception {

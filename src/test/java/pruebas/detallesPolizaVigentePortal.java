@@ -43,6 +43,7 @@ public class detallesPolizaVigentePortal {
 		Assert.assertEquals(policy.esPolizaVigente(), "VIGENTE", "No es una poliza vigente");
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
+		Utilities.waiter(30);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 		Utilities.waiter(2);
 	}

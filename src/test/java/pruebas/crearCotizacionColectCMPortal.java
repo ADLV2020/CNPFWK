@@ -69,6 +69,7 @@ public class crearCotizacionColectCMPortal {
 
 		cotizacion.cotizar();
 		//AssertJUnit.assertTrue(cotizacion.pantallaFinalizacionDisponible());
+		Utilities.waiter(5);
 		cotizacion.guardar(mail);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Confirma y finaliza");
 		Utilities.realizarScrollUp(driver);

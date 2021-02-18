@@ -43,15 +43,15 @@ public class ImprimirPolizaIndividualTest {
 
 		policy.clicOnDetalles();
 		Assert.assertTrue(policy.pantallaDetalleDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(15);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Detalles de la póliza");
 
 		ModificacionPolizas modificacionpolizas = new ModificacionPolizas(driver);
-		Utilities.waiter(2);
+		Utilities.waiter(4);
 		modificacionpolizas.clicOnModificar();
-		Utilities.waiter(2);
+		Utilities.waiter(4);
 		Assert.assertTrue(modificacionpolizas.pantallaModificacionDisponible());
-		Utilities.waiter(5);
+		Utilities.waiter(6);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Impresiones disponibles");
 		
 		modificacionpolizas.clicOnImprimirPoliza();

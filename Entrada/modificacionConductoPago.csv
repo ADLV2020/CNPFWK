@@ -1,2 +1,3 @@
-poliza,nombretomador,solicitud,dnitomador,nombreasegurado,dniasegurado,fechaemision,fechahasta,ramo,medioPago,nroTarjeta,observaciones
-23120,,,,,,,,,VISA,4029181051216115,Observaciones
+poliza,nombretomador,solicitud,dnitomador,nombreasegurado,dniasegurado,fechaemision,fechahasta,ramo,medioPago,nroTarjeta,observaciones,tipopoliza
+23120,,,,,,,,,VISA,4029181051216115,Observaciones,Individual
+11745812,,,,,,,,,VISA,4029155661216229,Observaciones,Colectivo

@@ -47,13 +47,16 @@ public class PolizaDescargaEstadoCuentaTest {
 		buscar.realizaBusqueda(poliza, nombretomador, solicitud, dnitomador, nombreasegurado, dniasegurado, fechaemision, fechahasta, ramo, driver);
 		
 		policy.clicOnVerPerfil();
+		Utilities.waiter(8);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Perfil");
-		Utilities.waiter(3);
+		Utilities.waiter(8);
 		policy.clicOnVerEstadoCuenta();
+		Utilities.waiter(8);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Estado de cuenta");
 
 		Utilities.realizarScrollDown(driver);
 		policy.clicOnDescargarEstadoCuenta();
+		Utilities.waiter(8);
 		CapturaEvidencia.capturarPantallaEnDocumento(driver, rutaEvidencias + "\\img.png", rutaEvidencias + "\\" + nombreArchivoEvidencias, "Descargar Estado de Cuenta");
 
 	}

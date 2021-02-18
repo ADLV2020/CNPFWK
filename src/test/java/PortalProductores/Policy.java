@@ -84,6 +84,12 @@ public class Policy {
 	@FindBy(xpath="//button[@id='DescargarDetalle']")
 	private WebElement btnDescargarEstadoCuenta;
 	
+	@FindBy(xpath="//a[contains(text(),'Modificación de póliza')]")
+	private WebElement btnModificarPoliza;
+	
+	@FindBy(xpath="//a[contains(text(), 'Conducto de Pago Tomador')]")
+	private WebElement btnConductoPagoTomador;
+	
 	private WebDriver driver;
 	WebDriverWait wait;
 	
@@ -150,6 +156,7 @@ public class Policy {
 	}
 	
 	public void clicOnVerEndoso() {
+		Utilities.waiter(4);
 		wait.until(ExpectedConditions.elementToBeClickable(btnEndosos)).click();
 	}
 	
@@ -167,5 +174,13 @@ public class Policy {
 	
 	public void clicOnAsegurado() {
 		wait.until(ExpectedConditions.elementToBeClickable(btnAsegurado)).click();
+	}
+	
+	public void clicOnModificarPoliza() {
+		wait.until(ExpectedConditions.elementToBeClickable(btnModificarPoliza)).click();
+	}
+	
+	public void clicOnModificaPagoTomador() {
+		wait.until(ExpectedConditions.elementToBeClickable(btnConductoPagoTomador)).click();
 	}
 }
