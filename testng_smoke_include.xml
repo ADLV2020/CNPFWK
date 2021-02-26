@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="pruebas.A_Test_001_pocSmoke">
+				<methods>
+					<include name="poc001_mitest_002" />
+				</methods>
+			</class>
+			<class name="pruebas.A_Test_002_pocSmoke">
+				<methods>
+					<include name="poc002_mitest_002" />
+				</methods>
+			</class>
+			<class name="pruebas.A_Test_003_pocSmoke">
+				<methods>
+					<include name="poc003_mitest_002" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
